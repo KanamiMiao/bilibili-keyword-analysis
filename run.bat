@@ -8,13 +8,15 @@ if not exist ".venv\" (
 
 echo 开始安装依赖
 pip install -r requirements.txt
-echo 依赖安装完成：
-pip list
+echo 依赖安装完成
 
 echo 获取数据集
 python get_dataset.py
 
 echo 开始处理数据
 python analysis_dataset.py
+
+echo 开始生成报告
+python write_report.py
 
 pause

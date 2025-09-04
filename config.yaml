@@ -1,8 +1,8 @@
 dataset_dir: 'datasets'  # 数据集保存的目录
 fig_dir: 'figures'  # 图表保存的目录
 
-keyword: '原神'  # 搜索词
-if_set_day_limit: True  # 是否设置截止日期
+keyword: '卡拉彼丘'  # 搜索词
+if_set_day_limit: False  # 是否设置截止日期
 day_limit: '2025-09-02'  # 年-月-日：获取一直获取数据，直到这一天为止
 num_limit: 7  # 无截止日期时，一直获取数据，直到连续{num_limit}天没有数据为止
 day_distance: 0  # 0:从今天开始，1:从昨天开始，2:从前天开始，以此类推

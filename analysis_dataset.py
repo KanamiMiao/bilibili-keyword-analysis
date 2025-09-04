@@ -54,6 +54,11 @@ try:
 except:
     pass
 
+try:
+    os.makedirs(f'{fig_dir}/{keyword}')
+except:
+    pass
+
 
 # ## 2. 数据清洗与预处理
 
@@ -193,7 +198,7 @@ hit_counts.plot(kind='bar')
 plt.title('各字段作为搜索命中原因的出现次数')
 plt.xticks(rotation=0)
 plt.tight_layout()
-plt.savefig(f'{fig_dir}/各字段作为搜索命中原因的出现次数.png')
+plt.savefig(f'{fig_dir}/{keyword}/各字段作为搜索命中原因的出现次数.png')
 
 
 
@@ -212,7 +217,7 @@ plt.xlabel('日期')
 plt.ylabel('数量')
 plt.xticks(rotation=0)
 plt.tight_layout()
-plt.savefig(f'{fig_dir}/每天的视频发布数量.png')
+plt.savefig(f'{fig_dir}/{keyword}/每天的视频发布数量.png')
 
 
 
@@ -229,7 +234,7 @@ plt.xlabel('月份')
 plt.ylabel('数量')
 plt.xticks(rotation=90)
 plt.tight_layout()
-plt.savefig(f'{fig_dir}/每月的视频发布数量.png')
+plt.savefig(f'{fig_dir}/{keyword}/每月的视频发布数量.png')
 
 
 
@@ -246,7 +251,7 @@ plt.xlabel('年份')
 plt.ylabel('数量')
 plt.xticks(rotation=0)
 plt.tight_layout()
-plt.savefig(f'{fig_dir}/每年的视频发布数量.png')
+plt.savefig(f'{fig_dir}/{keyword}/每年的视频发布数量.png')
 
 
 
@@ -271,7 +276,7 @@ plt.xlabel('时长区间')
 plt.ylabel('数量')
 plt.xticks(rotation=0)
 plt.tight_layout()
-plt.savefig(f'{fig_dir}/视频时长分布.png')
+plt.savefig(f'{fig_dir}/{keyword}/视频时长分布.png')
 
 
 
@@ -312,7 +317,7 @@ def plt_video_top10(by:str, title:str):
     table.auto_set_column_width([0, 1, 2, 3])  # 根据内容自动调整列宽
     #设置导出的大小
     plt.tight_layout()
-    plt.savefig(f'{fig_dir}/{title}.png')
+    plt.savefig(f'{fig_dir}/{keyword}/{title}.png')
     
 
 
@@ -377,7 +382,7 @@ plt.xlabel('up主')
 plt.ylabel('数量')
 plt.xticks(rotation=0)
 plt.tight_layout()
-plt.savefig(f'{fig_dir}/发布视频数量前十的up主.png')
+plt.savefig(f'{fig_dir}/{keyword}/发布视频数量前十的up主.png')
 
 
 
@@ -397,7 +402,7 @@ def plt_up_top10(by:str, title:str):
     plt.xlabel('up主')
     plt.xticks(rotation=0)
     plt.tight_layout()
-    plt.savefig(f'{fig_dir}/{title}.png')
+    plt.savefig(f'{fig_dir}/{keyword}/{title}.png')
     
 
 
