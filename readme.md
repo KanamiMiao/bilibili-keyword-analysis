@@ -13,3 +13,18 @@ ipynb笔记：<a href='analysis_dataset.ipynb'>卡拉彼丘视频数据分析</a
 分析报告示例：
 <img src='others/pics/report.png'></a>
 
+## 运行须知
+配置文件为<a href='config.yaml'>config.yaml</a>，请根据实际情况修改配置文件中的参数。
+<pre><code>
+dataset_dir: 'datasets'  # 数据集保存的目录
+fig_dir: 'figures'  # 图表保存的目录
+
+keyword: '卡拉彼丘'  # 搜索词
+if_set_day_limit: False  # 是否设置截止日期
+day_limit: '2025-09-02'  # 年-月-日：获取一直获取数据，直到这一天为止
+num_limit: 7  # 无截止日期时，一直获取数据，直到连续{num_limit}天没有数据为止
+day_distance: 0  # 0:从今天开始，1:从昨天开始，2:从前天开始，以此类推
+
+sleep_time: 0.5  # 每次请求之间的延迟（秒）
+</code></pre>
+双击run.bat运行程序。
