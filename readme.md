@@ -9,7 +9,6 @@
 使用Python对数据进行处理
 
 ## 数据可视化
-ipynb笔记：<a href='analysis_dataset.ipynb'>卡拉彼丘视频数据分析</a><br>
 分析报告示例：
 <img src='others/pics/report.png'></a>
 
