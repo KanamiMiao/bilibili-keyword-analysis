@@ -1,14 +1,15 @@
 @echo off
-echo 开始安装虚拟环境
-if not exist ".venv\" (
-    echo 创建虚拟环境...
-    python -m venv .venv
-    echo 虚拟环境已创建
-)
+echo 开始运行脚本...
 
-echo 开始安装依赖
-pip install -r requirements.txt
-echo 依赖安装完成
+REM 激活虚拟环境
+echo 激活虚拟环境...
+if exist ".venv\Scripts\activate.bat" (
+    call .venv\Scripts\activate.bat
+) else (
+    echo 错误: 未找到虚拟环境，请先运行 setup.bat
+    pause
+    exit /b 1
+)
 
 echo 获取数据集
 python get_dataset.py
